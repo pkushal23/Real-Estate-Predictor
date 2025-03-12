@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://cdn.houseplansservices.com/product/4eat34je4b4208ebguq0ruoekn/w800x533.jpg?v=2') no-repeat center center/cover;
+}
+
+.container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0 5px;
+}
+
+.input-field, .dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.dropdown {
+    background: #f9f9f9;
+}
+
+.switch-field {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.switch-field input {
+    display: none;
+}
+
+.switch-field label {
+    background-color: #e4e4e4;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.switch-field input:checked + label {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.result {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #f8d7da;
+    color: #721c24;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: none;
+}
