@@ -1,4 +1,5 @@
 import json
+import os
 import pickle
 import numpy as np
 __locations = None
@@ -24,18 +25,26 @@ def get_estimated_price(location,sqft,bhk,bath):
 def get_location_names():
     return __locations
 
+
 def load_saved_artifacts():
     print("loading saved artifacts...start")
     global __data_columns
     global __locations
+    global __model
 
-    with open("./artifacts/columns.json", 'r') as f:
+    # Get the path relative to the current script file
+    base_dir = os.path.dirname(__file__)
+    artifacts_path = os.path.join(base_dir, "artifacts")
+
+    with open(os.path.join(artifacts_path, "columns.json"), 'r') as f:
         __data_columns = json.load(f)['data_columns']
         __locations = __data_columns[3:]
-    global __model
-    with open("./artifacts/Banglore_House_Data_model.pickle",'rb') as f:
+
+    with open(os.path.join(artifacts_path, "Banglore_House_Data_model.pickle"), 'rb') as f:
         __model = pickle.load(f)
+
     print("loading saved artifacts...done")
+
 
 if __name__=="__main__":
     load_saved_artifacts()
