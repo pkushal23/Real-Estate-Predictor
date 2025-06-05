@@ -5,7 +5,7 @@ function getBathValue() {
           return parseInt(i)+1;
       }
     }
-    return -1; // Invalid Value
+    return -1; 
   }
   
   function getBHKValue() {
@@ -15,7 +15,7 @@ function getBathValue() {
           return parseInt(i)+1;
       }
     }
-    return -1; // Invalid Value
+    return -1; 
   }
   
 function onClickedEstimatePrice() {
@@ -58,4 +58,4 @@ function onClickedEstimatePrice() {
     });
   }
   
-  window.onload = onPageLoad;
+window.onload = onPageLoad;
